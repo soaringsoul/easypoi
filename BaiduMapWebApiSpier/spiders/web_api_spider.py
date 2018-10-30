@@ -16,7 +16,7 @@ from BaiduMapWebApiSpier.util.geo.amap_get_geopolylines import get_region_polyli
 from BaiduMapWebApiSpier.util.geo.GetRegionBounds import GetBoundsList
 
 from BaiduMapWebApiSpier.items import BaidumapwebapispierItem
-from BaiduMapWebApiSpier.util.email.send_email import send_email_qq
+from BaiduMapWebApiSpier.util.email.send_email import send_email_163
 from BaiduMapWebApiSpier.util.geo.BaiduMapGeoConvert import BaiduMapGeoConvert
 
 
@@ -140,7 +140,7 @@ class WebApiCrawler(Spider):
             bad_ak_df = pd.read_csv(r'bad_ak_lst.csv')
             bad_ak_lst = [x for x in bad_ak_df['bad_ak']]
             if ak not in bad_ak_lst:
-                send_email_qq(email_subject, email_body, 'bad_ak_lst.csv')
+                send_email_163(email_subject, email_body, 'bad_ak_lst.csv')
         except Exception as e:
             logging.info(e)
 

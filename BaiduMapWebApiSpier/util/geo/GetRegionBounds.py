@@ -5,7 +5,7 @@ from multiprocessing.dummy import Pool
 
 import logging
 from shapely.geometry import Polygon
-from BaiduMapWebApiSpier.settings import ak
+from BaiduMapWebApiSpier.settings import ak_list
 from BaiduMapWebApiSpier.util.geo.amap_get_geopolylines import get_region_polyline
 from BaiduMapWebApiSpier.util.geo.split_rectangle_area import split_rectanle_area
 from BaiduMapWebApiSpier.spiders.PlaceApi import PlaceApiByBounds

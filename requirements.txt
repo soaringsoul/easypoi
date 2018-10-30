@@ -1,0 +1,11 @@
+pandas
+PyMySQL==0.9.2
+requests==2.19.1
+requests-download==0.1.2
+Scrapy==1.5.1
+Shapely==1.6.4.post2
+SQLAlchemy==1.2.12
+Twisted==18.7.0
+xlrd==1.0.0
+yagmail==0.11.214
+
