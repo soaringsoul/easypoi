@@ -1,0 +1,677 @@
+2018-10-30 16:03:23 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: BaiduMapWebApiSpier)
+2018-10-30 16:03:23 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.5.4 (v3.5.4:3f56838, Aug  8 2017, 02:17:05) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.17134-SP0
+2018-10-30 16:03:23 [scrapy.crawler] INFO: Overridden settings: {'LOG_LEVEL': 'INFO', 'LOG_FILE': 'log.txt', 'BOT_NAME': 'BaiduMapWebApiSpier', 'SPIDER_MODULES': ['BaiduMapWebApiSpier.spiders'], 'NEWSPIDER_MODULE': 'BaiduMapWebApiSpier.spiders'}
+2018-10-30 16:03:23 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2018-10-30 16:03:24 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-10-30 16:03:24 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-10-30 16:03:24 [scrapy.middleware] INFO: Enabled item pipelines:
+['BaiduMapWebApiSpier.pipelines.BaidumapwebapispierPipeline']
+2018-10-30 16:03:24 [scrapy.core.engine] INFO: Spider opened
+2018-10-30 16:03:24 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-10-30 16:03:24 [root] INFO: 开始转换经纬度坐标为百度地图坐标，共计4806个坐标， 请耐心等待
+2018-10-30 16:03:25 [root] INFO: 转换完成，共转换了4806个坐标
+2018-10-30 16:03:25 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "D:\Python35\lib\site-packages\scrapy\core\engine.py", line 127, in _next_request
+    request = next(slot.start_requests)
+  File "G:\PythonProjectsFromGithub\BaiduMapWebApiSpier\BaiduMapWebApiSpier\spiders\web_api_spider.py", line 44, in start_requests
+    bd_poly = BaiduMapGeoConvert.geo_convert_no_limit_return_polygon(poly)
+  File "G:\PythonProjectsFromGithub\BaiduMapWebApiSpier\BaiduMapWebApiSpier\util\geo\BaiduMapGeoConvert.py", line 85, in geo_convert_no_limit_return_polygon
+    print(res_json['result'])
+TypeError: list indices must be integers or slices, not str
+2018-10-30 16:03:25 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-10-30 16:03:25 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 10, 30, 8, 3, 25, 708581),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'start_time': datetime.datetime(2018, 10, 30, 8, 3, 24, 510379)}
+2018-10-30 16:03:25 [scrapy.core.engine] INFO: Spider closed (finished)
+2018-10-30 16:04:08 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: BaiduMapWebApiSpier)
+2018-10-30 16:04:08 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.5.4 (v3.5.4:3f56838, Aug  8 2017, 02:17:05) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.17134-SP0
+2018-10-30 16:04:08 [scrapy.crawler] INFO: Overridden settings: {'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['BaiduMapWebApiSpier.spiders'], 'NEWSPIDER_MODULE': 'BaiduMapWebApiSpier.spiders', 'LOG_FILE': 'log.txt', 'BOT_NAME': 'BaiduMapWebApiSpier'}
+2018-10-30 16:04:08 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-10-30 16:04:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-10-30 16:04:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-10-30 16:04:09 [scrapy.middleware] INFO: Enabled item pipelines:
+['BaiduMapWebApiSpier.pipelines.BaidumapwebapispierPipeline']
+2018-10-30 16:04:09 [scrapy.core.engine] INFO: Spider opened
+2018-10-30 16:04:09 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-10-30 16:04:09 [root] INFO: 开始转换经纬度坐标为百度地图坐标，共计4806个坐标， 请耐心等待
+2018-10-30 16:04:10 [root] INFO: 转换完成，共转换了4806个坐标
+2018-10-30 16:04:12 [root] INFO: 当前需要解析的url共有560个
+2018-10-30 16:05:16 [scrapy.core.scraper] ERROR: Error processing {'poly': <shapely.geometry.polygon.Polygon object at 0x000002C3DCA2BF28>,
+ 'region': '成都市',
+ 'requests_url': 'http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,102.99940157619439,30.43205161382103,103.47554918599903&ak=kKPe6mqjoQ6Ucs8WiqpnASf5&page_num=0',
+ 'results': [{'address': '天庆街212号',
+              'area': '邛崃市',
+              'city': '成都市',
+              'detail': 1,
+              'detail_info': {'children': [],
+                              'detail_url': 'http://api.map.baidu.com/place/detail?uid=324f46a792d61fbf0c0a7098&output=html&source=placeapi_v2',
+                              'overall_rating': '0.0',
+                              'tag': '教育培训;高等院校',
+                              'type': 'education'},
+              'location': {'lat': 30.418364, 'lng': 103.460151},
+              'name': '成都广播电视大学邛崃分校(天庆街)',
+              'province': '四川省',
+              'uid': '324f46a792d61fbf0c0a7098'}],
+ 'search_word': '大学'}
+Traceback (most recent call last):
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 2158, in _wrap_pool_connect
+    return fn()
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 400, in connect
+    return _ConnectionFairy._checkout(self)
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 788, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 529, in checkout
+    rec = pool._do_get()
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 1193, in _do_get
+    self._dec_overflow()
+  File "D:\Python35\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "D:\Python35\lib\site-packages\sqlalchemy\util\compat.py", line 249, in reraise
+    raise value
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 1190, in _do_get
+    return self._create_connection()
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 347, in _create_connection
+    return _ConnectionRecord(self)
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 474, in __init__
+    self.__connect(first_connect_check=True)
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 671, in __connect
+    connection = pool._invoke_creator(self)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\strategies.py", line 106, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\default.py", line 412, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "D:\Python35\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 598, in connect
+    self._request_authentication()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "D:\Python35\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Python35\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1049, "Unknown database 'lmx'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Python35\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "G:\PythonProjectsFromGithub\BaiduMapWebApiSpier\BaiduMapWebApiSpier\pipelines.py", line 54, in process_item
+    index=False)
+  File "D:\Python35\lib\site-packages\pandas\core\generic.py", line 2130, in to_sql
+    dtype=dtype)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 450, in to_sql
+    chunksize=chunksize, dtype=dtype)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 1126, in to_sql
+    table.create()
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 561, in create
+    if self.exists():
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 549, in exists
+    return self.pd_sql.has_table(self.name, self.schema)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 1154, in has_table
+    schema or self.meta.schema,
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 2055, in run_callable
+    with self.contextual_connect() as conn:
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 2123, in contextual_connect
+    self._wrap_pool_connect(self.pool.connect, None),
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 2162, in _wrap_pool_connect
+    e, dialect, self)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1476, in _handle_dbapi_exception_noconnection
+    exc_info
+  File "D:\Python35\lib\site-packages\sqlalchemy\util\compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "D:\Python35\lib\site-packages\sqlalchemy\util\compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 2158, in _wrap_pool_connect
+    return fn()
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 400, in connect
+    return _ConnectionFairy._checkout(self)
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 788, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 529, in checkout
+    rec = pool._do_get()
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 1193, in _do_get
+    self._dec_overflow()
+  File "D:\Python35\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "D:\Python35\lib\site-packages\sqlalchemy\util\compat.py", line 249, in reraise
+    raise value
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 1190, in _do_get
+    return self._create_connection()
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 347, in _create_connection
+    return _ConnectionRecord(self)
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 474, in __init__
+    self.__connect(first_connect_check=True)
+  File "D:\Python35\lib\site-packages\sqlalchemy\pool.py", line 671, in __connect
+    connection = pool._invoke_creator(self)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\strategies.py", line 106, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\default.py", line 412, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "D:\Python35\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 598, in connect
+    self._request_authentication()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "D:\Python35\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Python35\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.InternalError: (pymysql.err.InternalError) (1049, "Unknown database 'lmx'") (Background on this error at: http://sqlalche.me/e/2j85)
+2018-10-30 16:05:16 [scrapy.extensions.logstats] INFO: Crawled 5 pages (at 5 pages/min), scraped 0 items (at 0 items/min)
+2018-10-30 16:05:25 [root] INFO: File b'bad_ak_lst.csv' does not exist
+2018-10-30 16:05:25 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,102.99940157619439,30.43205161382103,103.47554918599903&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=5，将再次request
+2018-10-30 16:06:09 [scrapy.extensions.logstats] INFO: Crawled 5 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-10-30 16:07:09 [scrapy.extensions.logstats] INFO: Crawled 5 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-10-30 16:07:35 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: BaiduMapWebApiSpier)
+2018-10-30 16:07:35 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.5.4 (v3.5.4:3f56838, Aug  8 2017, 02:17:05) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.17134-SP0
+2018-10-30 16:07:35 [scrapy.crawler] INFO: Overridden settings: {'LOG_FILE': 'log.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'BaiduMapWebApiSpier.spiders', 'SPIDER_MODULES': ['BaiduMapWebApiSpier.spiders'], 'BOT_NAME': 'BaiduMapWebApiSpier'}
+2018-10-30 16:07:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-10-30 16:07:35 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-10-30 16:07:35 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-10-30 16:07:35 [scrapy.middleware] INFO: Enabled item pipelines:
+['BaiduMapWebApiSpier.pipelines.BaidumapwebapispierPipeline']
+2018-10-30 16:07:35 [scrapy.core.engine] INFO: Spider opened
+2018-10-30 16:07:35 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-10-30 16:07:35 [root] INFO: 开始转换经纬度坐标为百度地图坐标，共计4806个坐标， 请耐心等待
+2018-10-30 16:07:37 [root] INFO: 转换完成，共转换了4806个坐标
+2018-10-30 16:07:39 [root] INFO: 异常ak:28c65b25b6f0cfd017baca96da0f0a75
+2018-10-30 16:07:40 [root] INFO: 当前需要解析的url共有560个
+2018-10-30 16:07:40 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,102.99940157619439,30.43205161382103,103.47554918599903&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=4，将再次request
+2018-10-30 16:07:44 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,102.99940157619439,30.43205161382103,103.47554918599903&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=8，将再次request
+2018-10-30 16:07:44 [py.warnings] WARNING: D:\Python35\lib\site-packages\pymysql\cursors.py:170: Warning: (1366, "Incorrect string value: '\\xD6\\xD0\\xB9\\xFA\\xB1\\xEA...' for column 'VARIABLE_VALUE' at row 480")
+  result = self._query(query)
+
+2018-10-30 16:07:45 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,102.99940157619439,30.768574615657265,103.47554918599903&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=13，将再次request
+2018-10-30 16:07:45 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,103.47554918599903,30.43205161382103,103.95169679580367&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=3，将再次request
+2018-10-30 16:07:45 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,103.47554918599903,30.43205161382103,103.95169679580367&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=6，将再次request
+2018-10-30 16:07:45 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,103.47554918599903,30.43205161382103,103.95169679580367&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=11，将再次request
+2018-10-30 16:07:45 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,102.99940157619439,31.1050976174935,103.47554918599903&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=0，将再次request
+2018-10-30 16:07:48 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,102.99940157619439,31.1050976174935,103.47554918599903&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=4，将再次request
+2018-10-30 16:07:48 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,102.99940157619439,31.1050976174935,103.47554918599903&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=10，将再次request
+2018-10-30 16:07:50 [root] INFO: 当前使用的ak:dASz7ubuSpHidP1oQWKuAK3q无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,102.99940157619439,31.1050976174935,103.47554918599903&ak=dASz7ubuSpHidP1oQWKuAK3q&page_num=1，将再次request
+2018-10-30 16:07:50 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,102.99940157619439,31.441620619329733,103.47554918599903&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=6，将再次request
+2018-10-30 16:07:50 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,102.99940157619439,31.441620619329733,103.47554918599903&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=12，将再次request
+2018-10-30 16:07:51 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,103.47554918599903,31.1050976174935,103.95169679580367&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=7，将再次request
+2018-10-30 16:07:51 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,103.47554918599903,31.1050976174935,103.95169679580367&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=10，将再次request
+2018-10-30 16:07:51 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,103.47554918599903,31.1050976174935,103.95169679580367&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=15，将再次request
+2018-10-30 16:07:51 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,103.47554918599903,31.1050976174935,103.95169679580367&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=13，将再次request
+2018-10-30 16:07:51 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,103.47554918599903,31.441620619329733,103.95169679580367&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=1，将再次request
+2018-10-30 16:07:51 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,103.47554918599903,31.441620619329733,103.95169679580367&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=3，将再次request
+2018-10-30 16:07:51 [root] INFO: 'NoneType' object is not subscriptable
+2018-10-30 16:07:51 [scrapy.core.scraper] ERROR: Error processing {'poly': <shapely.geometry.polygon.Polygon object at 0x0000018936DEBE80>,
+ 'region': '成都市',
+ 'requests_url': 'http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,103.47554918599903,31.1050976174935,103.95169679580367&ak=dASz7ubuSpHidP1oQWKuAK3q&page_num=17',
+ 'results': [{'name': '成都市', 'num': 297}],
+ 'search_word': '大学'}
+Traceback (most recent call last):
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 727, in _read_query_result
+    result.read()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "D:\Python35\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Python35\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1264, "Out of range value for column 'isin_region' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Python35\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "G:\PythonProjectsFromGithub\BaiduMapWebApiSpier\BaiduMapWebApiSpier\pipelines.py", line 54, in process_item
+    index=False)
+  File "D:\Python35\lib\site-packages\pandas\core\generic.py", line 2130, in to_sql
+    dtype=dtype)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 450, in to_sql
+    chunksize=chunksize, dtype=dtype)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 1127, in to_sql
+    table.insert(chunksize)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 641, in insert
+    self._execute_insert(conn, keys, chunk_iter)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 616, in _execute_insert
+    conn.execute(self.insert_statement(), data)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "D:\Python35\lib\site-packages\sqlalchemy\sql\elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1200, in _execute_context
+    context)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "D:\Python35\lib\site-packages\sqlalchemy\util\compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "D:\Python35\lib\site-packages\sqlalchemy\util\compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\default.py", line 509, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 727, in _read_query_result
+    result.read()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "D:\Python35\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Python35\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.DataError: (pymysql.err.DataError) (1264, "Out of range value for column 'isin_region' at row 1") [SQL: 'INSERT INTO `成都市_bd_map_pois` (name, province, city, area, address, telephone, uid, street_id, detail, detail_info, location, detail_url, tag, type, search_word, region, requests_url, isin_region) VALUES (%(name)s, %(province)s, %(city)s, %(area)s, %(address)s, %(telephone)s, %(uid)s, %(street_id)s, %(detail)s, %(detail_info)s, %(location)s, %(detail_url)s, %(tag)s, %(type)s, %(search_word)s, %(region)s, %(requests_url)s, %(isin_region)s)'] [parameters: {'requests_url': 'http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,103.47554918599903,31.1050976174935,103.95169679580367&ak=dASz7ubuSpHidP1oQWKuAK3q&page_num=17', 'tag': 'None', 'street_id': 'None', 'name': '成都市', 'province': 'None', 'search_word': '大学', 'city': 'None', 'location': 'None', 'type': 'None', 'telephone': 'None', 'detail_url': 'None', 'uid': 'None', 'address': 'None', 'detail_info': 'None', 'region': '成都市', 'isin_region': 999, 'detail': 'None', 'area': 'None'}] (Background on this error at: http://sqlalche.me/e/9h9h)
+2018-10-30 16:07:51 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,103.47554918599903,31.441620619329733,103.95169679580367&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=7，将再次request
+2018-10-30 16:07:51 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,103.47554918599903,31.441620619329733,103.95169679580367&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=6，将再次request
+2018-10-30 16:07:51 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,103.47554918599903,31.441620619329733,103.95169679580367&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=8，将再次request
+2018-10-30 16:07:51 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,103.47554918599903,31.441620619329733,103.95169679580367&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=12，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,103.95169679580367,30.43205161382103,104.42784440560831&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=15，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,103.95169679580367,30.43205161382103,104.42784440560831&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=13，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,104.42784440560831,30.43205161382103,104.90399201541295&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=9，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,104.42784440560831,30.43205161382103,104.90399201541295&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=11，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,104.42784440560831,30.43205161382103,104.90399201541295&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=6，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,104.42784440560831,30.43205161382103,104.90399201541295&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=15，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,104.42784440560831,30.43205161382103,104.90399201541295&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=13，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,104.42784440560831,30.43205161382103,104.90399201541295&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=17，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,104.42784440560831,30.768574615657265,104.90399201541295&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=3，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,104.42784440560831,30.768574615657265,104.90399201541295&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=10，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,104.42784440560831,30.768574615657265,104.90399201541295&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=13，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,104.42784440560831,30.768574615657265,104.90399201541295&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=15，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,104.42784440560831,30.768574615657265,104.90399201541295&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=16，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,103.95169679580367,31.1050976174935,104.42784440560831&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=14，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,103.95169679580367,31.1050976174935,104.42784440560831&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=18，将再次request
+2018-10-30 16:07:52 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,103.95169679580367,31.441620619329733,104.42784440560831&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=3，将再次request
+2018-10-30 16:07:53 [root] INFO: 'NoneType' object is not subscriptable
+2018-10-30 16:07:53 [scrapy.core.scraper] ERROR: Error processing {'poly': <shapely.geometry.polygon.Polygon object at 0x0000018936DEBE80>,
+ 'region': '成都市',
+ 'requests_url': 'http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,103.95169679580367,31.1050976174935,104.42784440560831&ak=5Yg8EyxmWwTD7NxaPMHg4K7i&page_num=13',
+ 'results': [{'name': '成都市', 'num': 1423}, {'name': '德阳市', 'num': 38}],
+ 'search_word': '大学'}
+Traceback (most recent call last):
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1170, in _execute_context
+    context)
+  File "D:\Python35\lib\site-packages\sqlalchemy\dialects\mysql\mysqldb.py", line 105, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 197, in executemany
+    self._get_db().encoding)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 234, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 727, in _read_query_result
+    result.read()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "D:\Python35\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Python35\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1264, "Out of range value for column 'isin_region' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Python35\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "G:\PythonProjectsFromGithub\BaiduMapWebApiSpier\BaiduMapWebApiSpier\pipelines.py", line 54, in process_item
+    index=False)
+  File "D:\Python35\lib\site-packages\pandas\core\generic.py", line 2130, in to_sql
+    dtype=dtype)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 450, in to_sql
+    chunksize=chunksize, dtype=dtype)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 1127, in to_sql
+    table.insert(chunksize)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 641, in insert
+    self._execute_insert(conn, keys, chunk_iter)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 616, in _execute_insert
+    conn.execute(self.insert_statement(), data)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "D:\Python35\lib\site-packages\sqlalchemy\sql\elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1200, in _execute_context
+    context)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "D:\Python35\lib\site-packages\sqlalchemy\util\compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "D:\Python35\lib\site-packages\sqlalchemy\util\compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1170, in _execute_context
+    context)
+  File "D:\Python35\lib\site-packages\sqlalchemy\dialects\mysql\mysqldb.py", line 105, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 197, in executemany
+    self._get_db().encoding)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 234, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 727, in _read_query_result
+    result.read()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "D:\Python35\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Python35\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.DataError: (pymysql.err.DataError) (1264, "Out of range value for column 'isin_region' at row 1") [SQL: 'INSERT INTO `成都市_bd_map_pois` (name, province, city, area, address, telephone, uid, street_id, detail, detail_info, location, detail_url, tag, type, search_word, region, requests_url, isin_region) VALUES (%(name)s, %(province)s, %(city)s, %(area)s, %(address)s, %(telephone)s, %(uid)s, %(street_id)s, %(detail)s, %(detail_info)s, %(location)s, %(detail_url)s, %(tag)s, %(type)s, %(search_word)s, %(region)s, %(requests_url)s, %(isin_region)s)'] [parameters: ({'name': '成都市', 'detail_url': 'None', 'tag': 'None', 'requests_url': 'http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,103.95169679580367,31.1050976174935,104.42784440560831&ak=5Yg8EyxmWwTD7NxaPMHg4K7i&page_num=13', 'street_id': 'None', 'province': 'None', 'search_word': '大学', 'city': 'None', 'location': 'None', 'type': 'None', 'telephone': 'None', 'region': '成都市', 'uid': 'None', 'address': 'None', 'detail_info': 'None', 'isin_region': 999, 'detail': 'None', 'area': 'None'}, {'name': '德阳市', 'detail_url': 'None', 'tag': 'None', 'requests_url': 'http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,103.95169679580367,31.1050976174935,104.42784440560831&ak=5Yg8EyxmWwTD7NxaPMHg4K7i&page_num=13', 'street_id': 'None', 'province': 'None', 'search_word': '大学', 'city': 'None', 'location': 'None', 'type': 'None', 'telephone': 'None', 'region': '成都市', 'uid': 'None', 'address': 'None', 'detail_info': 'None', 'isin_region': 999, 'detail': 'None', 'area': 'None'})] (Background on this error at: http://sqlalche.me/e/9h9h)
+2018-10-30 16:07:53 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,103.95169679580367,31.441620619329733,104.42784440560831&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=7，将再次request
+2018-10-30 16:07:53 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,103.95169679580367,31.441620619329733,104.42784440560831&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=10，将再次request
+2018-10-30 16:07:53 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,103.95169679580367,31.441620619329733,104.42784440560831&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=13，将再次request
+2018-10-30 16:07:55 [root] INFO: 当前使用的ak:Zi5DZuH1YGKU9Zgt4ACyUUBzgpHSIi80无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,103.95169679580367,31.441620619329733,104.42784440560831&ak=Zi5DZuH1YGKU9Zgt4ACyUUBzgpHSIi80&page_num=11，将再次request
+2018-10-30 16:07:55 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,104.42784440560831,31.1050976174935,104.90399201541295&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=1，将再次request
+2018-10-30 16:07:56 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,104.42784440560831,31.1050976174935,104.90399201541295&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=5，将再次request
+2018-10-30 16:07:56 [root] INFO: 'NoneType' object is not subscriptable
+2018-10-30 16:07:56 [scrapy.core.scraper] ERROR: Error processing {'poly': <shapely.geometry.polygon.Polygon object at 0x0000018936DEBE80>,
+ 'region': '成都市',
+ 'requests_url': 'http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,104.42784440560831,31.1050976174935,104.90399201541295&ak=MFcFClPmzgoXkO4iPivDfI2j&page_num=8',
+ 'results': [{'name': '成都市', 'num': 117}, {'name': '德阳市', 'num': 3}],
+ 'search_word': '大学'}
+Traceback (most recent call last):
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1170, in _execute_context
+    context)
+  File "D:\Python35\lib\site-packages\sqlalchemy\dialects\mysql\mysqldb.py", line 105, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 197, in executemany
+    self._get_db().encoding)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 234, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 727, in _read_query_result
+    result.read()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "D:\Python35\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Python35\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1264, "Out of range value for column 'isin_region' at row 1")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Python35\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "G:\PythonProjectsFromGithub\BaiduMapWebApiSpier\BaiduMapWebApiSpier\pipelines.py", line 54, in process_item
+    index=False)
+  File "D:\Python35\lib\site-packages\pandas\core\generic.py", line 2130, in to_sql
+    dtype=dtype)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 450, in to_sql
+    chunksize=chunksize, dtype=dtype)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 1127, in to_sql
+    table.insert(chunksize)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 641, in insert
+    self._execute_insert(conn, keys, chunk_iter)
+  File "D:\Python35\lib\site-packages\pandas\io\sql.py", line 616, in _execute_insert
+    conn.execute(self.insert_statement(), data)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "D:\Python35\lib\site-packages\sqlalchemy\sql\elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1200, in _execute_context
+    context)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "D:\Python35\lib\site-packages\sqlalchemy\util\compat.py", line 265, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "D:\Python35\lib\site-packages\sqlalchemy\util\compat.py", line 248, in reraise
+    raise value.with_traceback(tb)
+  File "D:\Python35\lib\site-packages\sqlalchemy\engine\base.py", line 1170, in _execute_context
+    context)
+  File "D:\Python35\lib\site-packages\sqlalchemy\dialects\mysql\mysqldb.py", line 105, in do_executemany
+    rowcount = cursor.executemany(statement, parameters)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 197, in executemany
+    self._get_db().encoding)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 234, in _do_execute_many
+    rows += self.execute(sql + postfix)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "D:\Python35\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 727, in _read_query_result
+    result.read()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "D:\Python35\lib\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "D:\Python35\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Python35\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.DataError: (pymysql.err.DataError) (1264, "Out of range value for column 'isin_region' at row 1") [SQL: 'INSERT INTO `成都市_bd_map_pois` (name, province, city, area, address, telephone, uid, street_id, detail, detail_info, location, detail_url, tag, type, search_word, region, requests_url, isin_region) VALUES (%(name)s, %(province)s, %(city)s, %(area)s, %(address)s, %(telephone)s, %(uid)s, %(street_id)s, %(detail)s, %(detail_info)s, %(location)s, %(detail_url)s, %(tag)s, %(type)s, %(search_word)s, %(region)s, %(requests_url)s, %(isin_region)s)'] [parameters: ({'search_word': '大学', 'tag': 'None', 'requests_url': 'http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,104.42784440560831,31.1050976174935,104.90399201541295&ak=MFcFClPmzgoXkO4iPivDfI2j&page_num=8', 'street_id': 'None', 'province': 'None', 'name': '成都市', 'uid': 'None', 'location': 'None', 'type': 'None', 'telephone': 'None', 'detail_url': 'None', 'city': 'None', 'address': 'None', 'detail_info': 'None', 'region': '成都市', 'isin_region': 999, 'detail': 'None', 'area': 'None'}, {'search_word': '大学', 'tag': 'None', 'requests_url': 'http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,104.42784440560831,31.1050976174935,104.90399201541295&ak=MFcFClPmzgoXkO4iPivDfI2j&page_num=8', 'street_id': 'None', 'province': 'None', 'name': '德阳市', 'uid': 'None', 'location': 'None', 'type': 'None', 'telephone': 'None', 'detail_url': 'None', 'city': 'None', 'address': 'None', 'detail_info': 'None', 'region': '成都市', 'isin_region': 999, 'detail': 'None', 'area': 'None'})] (Background on this error at: http://sqlalche.me/e/9h9h)
+2018-10-30 16:07:56 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.768574615657265,104.42784440560831,31.1050976174935,104.90399201541295&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=15，将再次request
+2018-10-30 16:07:56 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,104.42784440560831,31.441620619329733,104.90399201541295&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=1，将再次request
+2018-10-30 16:07:56 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=31.1050976174935,104.42784440560831,31.441620619329733,104.90399201541295&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=14，将再次request
+2018-10-30 16:07:56 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,103.47554918599903,30.600313114739148,103.71362299090134&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=2，将再次request
+2018-10-30 16:07:56 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,103.47554918599903,30.600313114739148,103.71362299090134&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=5，将再次request
+2018-10-30 16:07:56 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,103.47554918599903,30.600313114739148,103.71362299090134&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=6，将再次request
+2018-10-30 16:07:56 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,103.47554918599903,30.600313114739148,103.71362299090134&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=3，将再次request
+2018-10-30 16:07:56 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,103.47554918599903,30.600313114739148,103.71362299090134&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=9，将再次request
+2018-10-30 16:07:56 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,103.47554918599903,30.600313114739148,103.71362299090134&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=19，将再次request
+2018-10-30 16:07:56 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,103.47554918599903,30.600313114739148,103.71362299090134&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=15，将再次request
+2018-10-30 16:07:56 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.600313114739148,103.47554918599903,30.768574615657265,103.71362299090134&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=2，将再次request
+2018-10-30 16:07:57 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,103.71362299090134,30.600313114739148,103.95169679580367&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=4，将再次request
+2018-10-30 16:07:57 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,103.71362299090134,30.600313114739148,103.95169679580367&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=10，将再次request
+2018-10-30 16:07:58 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.600313114739148,103.47554918599903,30.768574615657265,103.71362299090134&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=10，将再次request
+2018-10-30 16:07:58 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,103.95169679580367,30.600313114739148,104.189770600706&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=3，将再次request
+2018-10-30 16:07:58 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,103.95169679580367,30.600313114739148,104.189770600706&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=6，将再次request
+2018-10-30 16:07:58 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,103.95169679580367,30.600313114739148,104.189770600706&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=7，将再次request
+2018-10-30 16:07:58 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,103.95169679580367,30.600313114739148,104.189770600706&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=13，将再次request
+2018-10-30 16:07:58 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,104.189770600706,30.600313114739148,104.42784440560831&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=12，将再次request
+2018-10-30 16:07:58 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.600313114739148,104.189770600706,30.768574615657265,104.42784440560831&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=5，将再次request
+2018-10-30 16:07:59 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.600313114739148,104.189770600706,30.768574615657265,104.42784440560831&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=6，将再次request
+2018-10-30 16:07:59 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.600313114739148,104.189770600706,30.768574615657265,104.42784440560831&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=16，将再次request
+2018-10-30 16:07:59 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.600313114739148,103.95169679580367,30.684443865198205,104.07073369825483&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=0，将再次request
+2018-10-30 16:08:03 [root] INFO: 当前使用的ak:AB8715ae10c67feb78fea33787b1f974无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.600313114739148,104.189770600706,30.768574615657265,104.42784440560831&ak=AB8715ae10c67feb78fea33787b1f974&page_num=13，将再次request
+2018-10-30 16:08:03 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.43205161382103,104.189770600706,30.600313114739148,104.42784440560831&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=4，将再次request
+2018-10-30 16:08:03 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.600313114739148,103.95169679580367,30.684443865198205,104.07073369825483&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=7，将再次request
+2018-10-30 16:08:03 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.600313114739148,103.95169679580367,30.684443865198205,104.07073369825483&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=18，将再次request
+2018-10-30 16:08:03 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.684443865198205,103.95169679580367,30.768574615657265,104.07073369825483&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=12，将再次request
+2018-10-30 16:08:04 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.684443865198205,104.07073369825483,30.768574615657265,104.189770600706&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=0，将再次request
+2018-10-30 16:08:04 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.684443865198205,104.07073369825483,30.768574615657265,104.189770600706&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=2，将再次request
+2018-10-30 16:08:04 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.684443865198205,104.07073369825483,30.768574615657265,104.189770600706&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=1，将再次request
+2018-10-30 16:08:04 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.684443865198205,104.07073369825483,30.768574615657265,104.189770600706&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=4，将再次request
+2018-10-30 16:08:04 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.684443865198205,104.07073369825483,30.768574615657265,104.189770600706&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=19，将再次request
+2018-10-30 16:08:04 [root] INFO: 当前使用的ak:KU0xe576HXNPVczSltUfhf4jRDTXuBjY无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.600313114739148,104.07073369825483,30.642378489968678,104.13025214948041&ak=KU0xe576HXNPVczSltUfhf4jRDTXuBjY&page_num=14，将再次request
+2018-10-30 16:08:04 [root] INFO: 当前使用的ak:CB9b776692623d30a148b5c5dc2b75a6无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.642378489968678,104.07073369825483,30.684443865198205,104.13025214948041&ak=CB9b776692623d30a148b5c5dc2b75a6&page_num=1，将再次request
+2018-10-30 16:08:05 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.642378489968678,104.07073369825483,30.684443865198205,104.13025214948041&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=17，将再次request
+2018-10-30 16:08:05 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.600313114739148,104.13025214948041,30.642378489968678,104.189770600706&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=3，将再次request
+2018-10-30 16:08:05 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.600313114739148,104.13025214948041,30.642378489968678,104.189770600706&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=9，将再次request
+2018-10-30 16:08:05 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.642378489968678,104.13025214948041,30.684443865198205,104.189770600706&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=4，将再次request
+2018-10-30 16:08:06 [root] INFO: 当前使用的ak:3a345e5b8b56a7f80605cd95d64634a8无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.600313114739148,104.13025214948041,30.642378489968678,104.189770600706&ak=3a345e5b8b56a7f80605cd95d64634a8&page_num=8，将再次request
+2018-10-30 16:08:06 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-10-30 16:08:06 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 261616,
+ 'downloader/request_count': 560,
+ 'downloader/request_method_count/GET': 560,
+ 'downloader/response_bytes': 287018,
+ 'downloader/response_count': 560,
+ 'downloader/response_status_count/200': 560,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 10, 30, 8, 8, 6, 395664),
+ 'item_scraped_count': 37,
+ 'log_count/ERROR': 3,
+ 'log_count/INFO': 98,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 560,
+ 'scheduler/dequeued': 560,
+ 'scheduler/dequeued/memory': 560,
+ 'scheduler/enqueued': 560,
+ 'scheduler/enqueued/memory': 560,
+ 'start_time': datetime.datetime(2018, 10, 30, 8, 7, 35, 596857)}
+2018-10-30 16:08:06 [scrapy.core.engine] INFO: Spider closed (finished)
+2018-10-30 16:09:54 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: BaiduMapWebApiSpier)
+2018-10-30 16:09:54 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.5.4 (v3.5.4:3f56838, Aug  8 2017, 02:17:05) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-10-10.0.17134-SP0
+2018-10-30 16:09:54 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'BaiduMapWebApiSpier', 'NEWSPIDER_MODULE': 'BaiduMapWebApiSpier.spiders', 'LOG_FILE': 'log.txt', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['BaiduMapWebApiSpier.spiders']}
+2018-10-30 16:09:54 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2018-10-30 16:09:55 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-10-30 16:09:55 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-10-30 16:09:55 [scrapy.middleware] INFO: Enabled item pipelines:
+['BaiduMapWebApiSpier.pipelines.BaidumapwebapispierPipeline']
+2018-10-30 16:09:55 [scrapy.core.engine] INFO: Spider opened
+2018-10-30 16:09:55 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-10-30 16:09:55 [root] INFO: 开始转换经纬度坐标为百度地图坐标，共计4806个坐标， 请耐心等待
+2018-10-30 16:09:57 [root] INFO: 转换完成，共转换了4806个坐标
+2018-10-30 16:09:59 [root] INFO: 当前需要解析的url共有560个
+2018-10-30 16:09:59 [py.warnings] WARNING: D:\Python35\lib\site-packages\pymysql\cursors.py:170: Warning: (1366, "Incorrect string value: '\\xD6\\xD0\\xB9\\xFA\\xB1\\xEA...' for column 'VARIABLE_VALUE' at row 480")
+  result = self._query(query)
+
+2018-10-30 16:10:07 [root] INFO: 当前使用的ak:iMplFNfYyAf4e7EleegtObtcOZdliriG无效，请求目标url:http://api.map.baidu.com/place/v2/search?output=json&query=%E5%A4%A7%E5%AD%A6&page_size=20&scope=2&bounds=30.095528611984793,104.42784440560831,30.43205161382103,104.90399201541295&ak=iMplFNfYyAf4e7EleegtObtcOZdliriG&page_num=12，将再次request
+2018-10-30 16:10:15 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-10-30 16:10:15 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 264080,
+ 'downloader/request_count': 560,
+ 'downloader/request_method_count/GET': 560,
+ 'downloader/response_bytes': 297908,
+ 'downloader/response_count': 560,
+ 'downloader/response_status_count/200': 560,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 10, 30, 8, 10, 15, 176197),
+ 'item_scraped_count': 41,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 560,
+ 'scheduler/dequeued': 560,
+ 'scheduler/dequeued/memory': 560,
+ 'scheduler/enqueued': 560,
+ 'scheduler/enqueued/memory': 560,
+ 'start_time': datetime.datetime(2018, 10, 30, 8, 9, 55, 542699)}
+2018-10-30 16:10:15 [scrapy.core.engine] INFO: Spider closed (finished)
