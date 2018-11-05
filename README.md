@@ -85,13 +85,13 @@
 		query_word_list = ['大学', '咖啡馆']
 
 6. 设置mysql 存储信息
-
-	# 设置mysql 信息
-	MYSQL_HOST = 'localhost'  # mysql ip
-	MYSQL_USER = 'root'  # mysql用户名
-	MYSQL_PASSWORD = 'test123456'  # mysql用户名密码
-	MYSQL_DBNAME = 'test'  # mysql 中数据库名，必须提前创建好
-	MYSQL_TableName = ''  # 将要写入的数据库中的表名，若不存在会自动创建，若为空，则自动以"指定的区域名_bd_map_pois"命名
+	
+		# 设置mysql 信息
+		MYSQL_HOST = 'localhost'  # mysql ip
+		MYSQL_USER = 'root'  # mysql用户名
+		MYSQL_PASSWORD = 'test123456'  # mysql用户名密码
+		MYSQL_DBNAME = 'test'  # mysql 中数据库名，必须提前创建好
+		MYSQL_TableName = ''  # 将要写入的数据库中的表名，若不存在会自动创建，若为空，则自动以"指定的区域名_bd_map_pois"命名
 
 
 
