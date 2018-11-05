@@ -36,32 +36,34 @@
 > 后续补充 
 >
 
-## 依赖库
+## 准备工作
 
-可以直接使用`pip install requirements.txt`安装
+1. 安装 `Twisted` 库，需要离线安装
 
-	pandas
+  可以到[https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted](https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted)下载相应python版本的Twisted 的离线文件安装。
+
+2. 安装[pywin32](https://sourceforge.net/projects/pywin32/files/pywin32/)
+
+注意：如果使用virtualenv 环境，请参考此博客[https://blog.csdn.net/qingche456/article/details/54587898](https://blog.csdn.net/qingche456/article/details/54587898)
+
+3. 使用`pip install requirements.txt`安装依赖库
+
+注意：前提是必须先安装`Twisted`库，不然安装时会报错
+
+	lxml==4.2.5
+	numpy==1.15.4
+	pandas==0.23.4
 	PyMySQL==0.9.2
-	requests==2.19.1
-	requests-download==0.1.2
+	pypinyin==0.33.2
+	requests==2.20.0
 	Scrapy==1.5.1
 	Shapely==1.6.4.post2
 	SQLAlchemy==1.2.12
-	Twisted==18.7.0
-	xlrd==1.0.0
 	yagmail==0.11.214
 
 
-注意以下两点：
-
-* `scrapy`中使用到了`Twisted`框架，如果在安装scrapy过程中提示Twisted安装错误：
-
-  可以到[https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted](https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted)下载Twisted 的离线文件安装。
 
 
-* 若出现 `ImportError: No module named 'win32api'` 错误，下载安装 [pywin32](https://sourceforge.net/projects/pywin32/files/pywin32/)
-
-## 使用说明
 
 ### 设置
 
