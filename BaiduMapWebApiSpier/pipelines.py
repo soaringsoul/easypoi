@@ -12,8 +12,10 @@ import logging
 from BaiduMapWebApiSpier.settings import MYSQL_TableName
 
 
+
 class BaidumapwebapispierPipeline(object):
     def process_item(self, item, spider):
+        global MYSQL_TableName
         poly = item['poly']
         if item['results']:
             results = item['results']
@@ -44,6 +46,7 @@ class BaidumapwebapispierPipeline(object):
             df = DataFrame(rows, columns=keys1 + keys2 + keys3)
             # region_pinyin = ''.join(lazy_pinyin(item['region']))
             region_pinyin = str(item['region'])
+
             # 判断点是否在指定poly区域内，使用到了shapely polygon.contains函数
             try:
                 df['isin_region'] = df['location'].apply(
@@ -51,6 +54,7 @@ class BaidumapwebapispierPipeline(object):
             except Exception as e:
                 logging.info(e)
                 df['isin_region'] = 999
+
             if MYSQL_TableName == "":
                 MYSQL_TableName = '{region}_bd_map_pois'.format(region=region_pinyin)
             else:

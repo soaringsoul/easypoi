@@ -2,3 +2,5 @@
 .idea/*
 BaiduMapWebApiSpier/ak_list.py
 log.txt
+*.pyc
+/__pycache__
