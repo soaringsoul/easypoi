@@ -12,6 +12,9 @@
 
 
 ## 功能概述
+### 原理
+
+[获取中国指定行政区域内所有POIS(兴趣点)的方法](https://zhuanlan.zhihu.com/p/48081408)
 
 ### 功能
 1. 获取中国境内指定行政区域内（最小可精确到街道）的指定关键词的所有兴趣点
@@ -28,12 +31,7 @@
 ![beijing_food_pois_examples_markers](/img/beijing_food_pois_examples_markers.jpg)
 
 
-----------
 
-## 项目结构
-
-> 后续补充 
->
 
 ----------
 
@@ -72,11 +70,12 @@
 
 ### 设置
 
-设置文件位置： `china_region_pois_spider\BaiduMapWebApiSpier\settings.py`
+设置文件位置： `BaiduMapPoiSpider\BaiduMapWebApiSpier\settings.py`
 
 #### 1 设置高德地图开发平台api_key
 
-默认已经设置（但有次数限制1000/天），这个key主要用来调用行政区划边界api，1000/天其实是足够了。
+默认已经设置（但有次数限制2000/天），这个key主要用来调用行政区划边界api，2000/天其实是足够了的。
+每个行政区域只调用一次。除非你一下子要获取2000个行政区域的兴趣点数据。
 
 高德地图开发平台：[https://lbs.amap.com/](https://lbs.amap.com/)
 	
@@ -85,7 +84,7 @@
 
 #### 2 设置百度地图开发平台ak
 
-可移步申请：[百度地图开放平台](http://lbsyun.baidu.com/)
+申请地址：[百度地图开放平台](http://lbsyun.baidu.com/)
 
 	ak_list = ['iMplFNfYyAf4e7EleegtObtcOZdliriG']
 
@@ -93,12 +92,12 @@
 
 #### 3 设置需要获取的区域 列表,可以填写多个省、市、区县，也可以填写省、市、区县的代码，具体可参考高德地图开放平台：行政区划查询接口
 
-	region_name_list = ["成都市", "德阳市"]
+	region_name_list = ["成都市", "德阳市", '成都市武侯区']
 
 
 #### 4 设置需要获取的兴趣点关键词，同样是列表，可填写多个
 
-	query_word_list = ['大学', '咖啡馆']
+	query_word_list = ['超市', '咖啡馆']
 
 #### 5 设置mysql 存储信息
 	
