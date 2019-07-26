@@ -3,4 +3,4 @@
 BaiduMapWebApiSpier/ak_list.py
 log.txt
 *.pyc
-/__pycache__
+*/__pycache__
