@@ -128,10 +128,13 @@
 ![run](/img/run.gif)
 
 
-
 ## 联系我
 
-你可以在这里找到我：[夜雨微寒的个人主页](https://xugongli.github.io/about/)
+如果在使用过程中遇到无法解决的问题，你可以通过关注我的个人公众号找到我。
+
+另外，也可以通过提交issue的方式提交问题。
+
+![rewnwen_wechat](./img/rewnwen_wechat.png)
 
 
 ## License
