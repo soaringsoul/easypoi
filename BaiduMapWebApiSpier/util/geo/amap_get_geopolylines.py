@@ -19,16 +19,21 @@ def get_region_polyline(region):
     url = 'http://restapi.amap.com/v3/config/district'
     response = requests.get(url, params=_parms)
     data = response.json()
-    # 获得城市边界坐标
-    polyline = data['districts'][0]['polyline']
-    # 匹配岛屿 ,polyline中若一个区域或者城市存在多个孤岛，则坐标以|lat,lng;lat,lng|分割
-    """
-    例如：polyline=113.823338,22.543809;113.823183,22.543825;113.823087,22.543947;
-    """
-    polyline = re.sub('\|', ';', polyline)
-    points = [(float(x.split(',')[0]), float(x.split(',')[1])) for x in polyline.split(';')]
-    poly = Polygon(points)
-    return poly
+
+    info = data['info']
+    if info == "OK":
+        # 获得城市边界坐标
+        polyline = data['districts'][0]['polyline']
+        # 匹配岛屿 ,polyline中若一个区域或者城市存在多个孤岛，则坐标以|lat,lng;lat,lng|分割
+        """
+        例如：polyline=113.823338,22.543809;113.823183,22.543825;113.823087,22.543947;
+        """
+        polyline = re.sub('\|', ';', polyline)
+        points = [(float(x.split(',')[0]), float(x.split(',')[1])) for x in polyline.split(';')]
+        poly = Polygon(points)
+        return poly
+    else:
+        print("当前高德地图的API KEY 已失效，请检查! \n错误详情：%s" % data)
 
 
 if __name__ == "__main__":

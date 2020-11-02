@@ -11,7 +11,7 @@ from numpy.random import randint
 from multiprocessing.dummy import Pool as ThreadPool
 from multiprocessing import Pool
 
-from BaiduMapWebApiSpier.settings import ak_list, query_word_list, region_name_list
+from BaiduMapWebApiSpier.settings import ak_list, query_word_list, region_name_list,GaoDeMap_API_KEY
 from BaiduMapWebApiSpier.util.geo.amap_get_geopolylines import get_region_polyline
 from BaiduMapWebApiSpier.util.geo.GetRegionBounds import GetBoundsList
 

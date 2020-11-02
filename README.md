@@ -77,8 +77,16 @@
 默认已经设置（但有次数限制2000/天），这个key主要用来调用行政区划边界api，2000/天其实是足够了的。
 每个行政区域只调用一次。除非你一下子要获取2000个行政区域的兴趣点数据。
 
-高德地图开发平台：[https://lbs.amap.com/](https://lbs.amap.com/)
-	
+高德地图开发平台：
+
+今天(2020年11月2日)收到高德地图的短信通知，我的这个账号被封了，以后就不提供这个api_key了，各位自己申请一个吧。
+
+![run](/img/gaode_apikey_error.png)
+
+
+
+申请链接：	https://lbs.amap.com/
+
 	GaoDeMap_API_KEY = '182ad5d7061ed1e421091c22089c3677'
 
 
@@ -100,7 +108,7 @@
 	query_word_list = ['超市', '咖啡馆']
 
 #### 5 设置mysql 存储信息
-	
+
 		# 设置mysql 信息
 		MYSQL_HOST = 'localhost'  # mysql ip
 		MYSQL_USER = 'root'  # mysql用户名

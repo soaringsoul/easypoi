@@ -8,7 +8,7 @@ NEWSPIDER_MODULE = 'BaiduMapWebApiSpier.spiders'
 LOG_LEVEL = 'INFO'
 
 LOG_FILE = 'log.txt'
-# 设置高德地图API Key
+# 设置高德地图API Key,替换182ad5d7061ed1e421091c22089c3677
 GaoDeMap_API_KEY = '182ad5d7061ed1e421091c22089c3677'
 
 # 设置百度地图， 在这里填入你的百度ak,可填写多个，程序会随机调用，调用前会检测ak是否无效，若无效自动使用列表中的下一个ak，直至使用完毕
