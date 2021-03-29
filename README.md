@@ -14,25 +14,15 @@
 
 3 可组合批量获取中国境内多个行政区域内多个关键词的所有兴趣点信息。例如你可以同时获取成都市、西安市、上海市三个指定的城市里所有超市、商场和大学的数据。
 
+## 下载地址
 
-----------
+> 天翼云盘：https://cloud.189.cn/t/nQJbqurQVnau
+
+如果发现下载地址失效，请在微信搜索人文互联网 公众号，关注后回复"poi"获取最新的下载链接；
 
 ## 运行
 
-![run](https://mmbiz.qpic.cn/mmbiz_gif/zFSfia9fsoicHqicERE9qbia1tortI8jETWCVAlnSNljebbwngyavrJiarQ0IbwktbMUBG9c8Zy929GbL2NcPFAbC5g/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
-
-
-
-## 准备工作
-
-
-使用`pip install requirements.txt`安装依赖库
-
-## 启动
-
-`python easy_poi.py`
-
-启动后在窗口里进行相应的设置后，点击启动开始采集。
+非常简单，所见即所得，不做过多说明。
 
 ![main](https://mmbiz.qpic.cn/mmbiz_gif/zFSfia9fsoicHqicERE9qbia1tortI8jETWCVAlnSNljebbwngyavrJiarQ0IbwktbMUBG9c8Zy929GbL2NcPFAbC5g/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1)
 
