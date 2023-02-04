@@ -1,6 +1,6 @@
 # README
 
-![](https://pic4.zhimg.com/v2-78d1472351272f41d8dd76a6d8a635c7\_xll.jpg)
+<img src="https://pic4.zhimg.com/v2-78d1472351272f41d8dd76a6d8a635c7_xll.jpg" alt="" data-size="line">
 
 ## EasyPoi
 
@@ -26,7 +26,7 @@
 
 非常简单，所见即所得，不做过多说明。
 
-![main](https://mmbiz.qpic.cn/mmbiz\_gif/zFSfia9fsoicHqicERE9qbia1tortI8jETWCVAlnSNljebbwngyavrJiarQ0IbwktbMUBG9c8Zy929GbL2NcPFAbC5g/640?wx\_fmt=gif\&tp=webp\&wxfrom=5\&wx\_lazy=1)
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 **采集结果示例**
 
@@ -48,7 +48,7 @@
 
 另外，也可以通过提交issue的方式提交问题。
 
-![supportme](https://mmbiz.qpic.cn/mmbiz\_jpg/zFSfia9fsoicFGymqxJTNf5TqjyVyRHmyUfF78ibS53UibZ4FbFCdtpDropg2NrWaBltyyj3NdvMI1b5XC7fJibsIbA/640?wx\_fmt=jpeg\&tp=webp\&wxfrom=5\&wx\_lazy=1\&wx\_co=1)
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### License
 
