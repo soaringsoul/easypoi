@@ -13,6 +13,6 @@ Contents
 
 .. toctree::
 
-   introdeuce
+   introduce
    usage
    api
