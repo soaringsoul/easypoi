@@ -38,17 +38,17 @@
 -  csv
 
 .. image:: https://pic3.zhimg.com/80/v2-f5f25aa2ad2c7fe1fd20f89069921aee\_720w.jpg
-   :alt: 
+   :alt:
 
 -  excel
 
 .. image:: https://pic3.zhimg.com/80/v2-03befe01d1f890ac48f12b42f513e13e\_720w.jpg
-   :alt: 
+   :alt:
 
 -  mysql
 
 .. image:: https://pic3.zhimg.com/80/v2-aacdf72a7f5611ef8bf8e9b45db6ff66\_720w.jpg
-   :alt: 
+   :alt:
 
 联系我
 ------
