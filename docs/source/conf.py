@@ -2,16 +2,14 @@
 
 # -- Project information
 
-project = 'EasyPoi'
-copyright = '2020, 人文帮'
-author = '夜雨微寒'
+project = 'Lumache'
+copyright = '2021, Graziella'
+author = 'Graziella'
 
 release = '0.1'
 version = '0.1.0'
 
 # -- General configuration
-
-
 
 extensions = [
     'sphinx.ext.duration',
