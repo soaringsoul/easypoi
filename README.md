@@ -1,12 +1,8 @@
-# README
-
-## EasyPoi
-
-#### 原理
+# 原理
 
 知乎：[获取中国指定行政区域内所有POIS(兴趣点)的方法](https://zhuanlan.zhihu.com/p/48081408)
 
-#### 功能
+# 核心功能
 
 1 获取中国境内指定行政区域内（最小可精确到街道）的指定关键词的所有兴趣点； 例如可以获取一个城市内所有的便利店、商场、超市、咖啡店、大学等地理位置信息，包括经纬度、所在的省、市、区县、街道等等。
 
@@ -14,19 +10,19 @@
 
 3 可组合批量获取中国境内多个行政区域内多个关键词的所有兴趣点信息。例如你可以同时获取成都市、西安市、上海市三个指定的城市里所有超市、商场和大学的数据。
 
-### 下载地址
+# 下载地址
 
 > 天翼云盘：https://cloud.189.cn/t/nQJbqurQVnau
 
 如果发现下载地址失效，请在微信搜索人文互联网 公众号，关注后回复"poi"获取最新的下载链接；
 
-### 运行
+# 如何运行
 
 非常简单，所见即所得，不做过多说明。
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-**采集结果示例**
+# **采集结果示例**
 
 * csv
 
@@ -48,6 +44,6 @@
 
 <figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-### License
+# License
 
 [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html).
