@@ -14,4 +14,4 @@ Contents
 
 .. toctree::
 
-   installer.md
+   introduce.rst
