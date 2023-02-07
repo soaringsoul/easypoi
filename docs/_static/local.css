@@ -1,0 +1,58 @@
+/** Add a counter before subsections **/
+h1:not(.tippy-header) {
+    counter-reset: subsection;
+    text-decoration: underline;
+}
+h2:not(.tippy-header) {
+    counter-reset: subsubsection;
+}
+h2:not(.tippy-header)::before {
+    counter-increment: subsection;
+    content: counter(subsection) ". ";
+}
+h3:not(.tippy-header)::before {
+    counter-increment: subsubsection;
+    content: counter(subsection) "." counter(subsubsection) ". ";
+}
+
+/** No icon for admonitions with no-icon class */
+.admonition > .admonition-title, div.admonition.no-icon > .admonition-title::before {
+    content: "";
+}
+.admonition > .admonition-title, div.admonition.no-icon > .admonition-title {
+    padding-left: .6rem;
+}
+
+/* Live preview page */
+iframe.pyscript, textarea.pyscript {
+    width: 100%;
+    height: 400px;
+}
+iframe.pyscript {
+    padding: 4px;
+}
+textarea.pyscript {
+    padding: 30px 20px 20px;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 16px;
+    font-family: monospace;
+}
+.display-flex {
+    display: flex;
+}
+.display-inline-block {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0;
+}
+span.label {
+    /* pyscript changes this and it messes up footnote labels */
+    all: unset;
+}
+
+.tippy-box {
+    background-color:var(--pst-color-surface);
+    color:var(--pst-color-text-base);
+    border: 1px solid var(--pst-color-border);
+}
