@@ -1,1 +1,3 @@
 myst-parser
+sphinx_design
+sphinx_pyscript
