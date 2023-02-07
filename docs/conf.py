@@ -32,9 +32,9 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
     "sphinx_design",
-    "sphinxext.rediraffe",
+
     "sphinxcontrib.mermaid",
-    "sphinxext.opengraph",
+
     "sphinx_pyscript",
     "sphinx_tippy",
 ]
