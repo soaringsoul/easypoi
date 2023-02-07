@@ -16,25 +16,10 @@ EasyPoi 是一个用户友好、可玩性强的播放器
    :maxdepth: 2
    :caption: 用户指南
 
-   quickstart
-   features
-   fuorc
-   roadmap
-   faq
-
+ 	 qlabel
 
 .. toctree::
    :maxdepth: 2
    :caption: 开发者指南
 
-   dev_quickstart
-   arch
-   api
-   media_assets_management_v1
-   media_assets_management/index_v2
-   protocol
-   glossary
-   research
-   philosophy
-   coding_style
-   contributing
+   tuple
