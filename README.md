@@ -12,7 +12,7 @@
 
 # 下载地址
 
-> 天翼云盘：https://cloud.189.cn/t/nQJbqurQVnau
+> https://www.yuque.com/soaringsoul/geotools
 
 如果发现下载地址失效，请在微信搜索人文互联网 公众号，关注后回复"poi"获取最新的下载链接；
 
